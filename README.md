@@ -107,8 +107,8 @@
    root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R2
  
    RouterOSPF-R2
-   |           |------> Host folder name
-   |------------------> Groupe folder name
+   R2 |------> Host folder name
+   RouterOSPF |------------------> Groupe folder name
    
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
