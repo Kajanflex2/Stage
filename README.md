@@ -150,5 +150,3 @@ Each subfolder contains the configuration file for each host, commonly referred 
    https://linuxhint.com/increase-virtualbox-disk-size/
 
    https://gparted.org/download.php
-
-    
