@@ -55,23 +55,23 @@
  
   start :	Starts the created infrastructure
  
-     root@milxc-snster-vm:~/OSPF# snster start
+       root@milxc-snster-vm:~/OSPF# snster start
   
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
   stop :	Stops the created infrastructure
  
-    root@milxc-snster-vm:~/OSPF#  snster stop
+      root@milxc-snster-vm:~/OSPF#  snster stop
 
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
   attach [user@]<name> [command]: Attaches a terminal to <name> as [user] (defaults to root) and executes [command] (defaults to interactive shell).
  
-    root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
-   
-    or 
-   
-    root@milxc-snster-vm:~/OSPF# snster attach debian@RouterOSPF-R1
+      root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
+     
+      or 
+     
+      root@milxc-snster-vm:~/OSPF# snster attach debian@RouterOSPF-R1
  
  ------------------------------------------------------------------------------------------------------------------------------------------------
  
