@@ -139,7 +139,6 @@ Each subfolder contains the configuration file for each host, commonly referred 
    
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-
  Note:
 
  For every modification made in provision.sh, you must destroy the old container and create a new one for the changes to take effect. Sometimes, it might take a while to attach to or display the container you wish to connect to. In such cases, stop the container and start it. Also, verify the iptables rules on the host machine within the VM and also verify the group.yml file.
@@ -152,5 +151,4 @@ Each subfolder contains the configuration file for each host, commonly referred 
 
     https://gparted.org/download.php
 
- 
-  
+    
