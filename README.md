@@ -145,8 +145,8 @@ Each subfolder contains the configuration file for each host, commonly referred 
 
  The file **"milxc-snster-vm-2.1.0.ova"**  you've downloaded will be around 25 GB. Once you've imported it into Oracle VirtualBox, you'll need to extend this storage limit to create all the models included in this repository.
  
-` Here are some web links that might help you:
-`
+ Here are some web links that might help you:
+
     https://linuxhint.com/increase-virtualbox-disk-size/
 
     https://gparted.org/download.php
