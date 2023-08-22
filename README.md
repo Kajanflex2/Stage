@@ -17,10 +17,10 @@
    Download the milxc-snster-vm-2.1.0.ova oracle virtualbox file and import that.
    Customize the configuration depend on your hardware.
    
-   Username: root or debian
-              |         |
-              |         |
-   Password: root or debian
+      Username: root or debian
+                 |         |
+                 |         |
+      Password: root or debian
    
   Minimum requirements:
     - 4 GB RAM 
