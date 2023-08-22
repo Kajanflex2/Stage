@@ -1,0 +1,14 @@
+;
+; BIND reverse data file for tonytechstore.tech
+;
+$TTL    604800
+@       IN      SOA     tonytechstore.tech. admin.tonytechstore.tech. (
+                        20230631        ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      tonytechstore.tech.
+254     IN      PTR     srvdhcp.tonytechstore.tech.
+

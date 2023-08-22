@@ -1,0 +1,105 @@
+version: 1
+
+###############################################################################
+
+header:
+  name: Maquette BGP et OSPF
+  comment: Local Hosts configurations
+
+###############################################################################
+hosts:
+  RA2LAN-PC1:
+    network:
+      interfaces:
+        eth0:
+          bridge: RA2-LAN
+          #ipv4: 192.168.1.10/24
+      #gatewayv4: 192.168.1.254
+###############################################################################
+
+  RA2LAN-PC2:
+    network:
+      interfaces:
+        eth0:
+          bridge: RA2-LAN
+          #ipv4: 192.168.1.20/24
+      #gatewayv4: 192.168.1.254
+
+###############################################################################
+  
+  RA3LAN-serverDNS:
+    network:
+      interfaces:
+        eth1:
+          bridge: RA3-LAN
+          ipv4: 172.16.110.20/24
+      gatewayv4: 172.16.110.254
+    templates:
+      - resolv:
+          domain: tonytechstore.tech
+          ns: 172.16.110.20
+###############################################################################
+
+  RA3LAN-serverWEB:
+    network:
+      interfaces:
+        eth1:
+          bridge: RA3-LAN
+          ipv4: 172.16.110.10/24
+      gatewayv4: 172.16.110.254
+    templates:
+      - resolv:
+          domain: tonytechstore.tech
+          ns: 172.16.110.20
+
+###############################################################################
+
+  RC2LAN-PC1:
+    network:
+      interfaces:
+        eth0:
+          bridge: RC2-LAN
+
+###############################################################################
+
+  RC2LAN-PC2:
+    network:
+      interfaces:
+        eth0:
+          bridge: RC2-LAN
+
+###############################################################################
+
+  RC3LAN-serverDNS:
+    network:
+      interfaces:
+        eth1:
+          bridge: RC3-LAN
+          ipv4: 172.16.120.10/24
+      gatewayv4: 172.16.120.254
+    templates:
+      - resolv:
+          domain: watchmovies.movie
+          ns: 172.16.120.10
+
+###############################################################################
+
+  RC3LAN-serverWEB:
+    network:
+      interfaces:
+        eth1:
+          bridge: RC3-LAN
+          ipv4: 172.16.120.144/24
+      gatewayv4: 172.16.120.254
+    templates:
+      - resolv:
+          domain: watchmovies.movie
+          ns: 172.16.120.10
+  
+
+###############################################################################
+
+
+
+
+

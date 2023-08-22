@@ -1,0 +1,56 @@
+version: 1
+
+###############################################################################
+
+header:
+  name: Maquette BGP et OSPF
+  comment: OSPF Area 100 && BGP AS N°65100
+
+###############################################################################
+hosts:
+  RA1:
+    network:
+      interfaces:
+        eth3:
+          bridge: RA13-LAN
+          ipv4: 10.10.3.1/24
+        eth2:
+          bridge: RA21-LAN
+          ipv4: 10.10.1.2/24
+        eth4:
+          bridge: transit-RAB
+          ipv4: 11.10.1.1/24
+
+          #bridge: nat-bridge
+          #ipv4: dhcp
+###############################################################################
+
+  RA2:
+    network:
+      interfaces:
+        eth0:
+          bridge: RA2-LAN
+          ipv4: 192.168.1.254/24
+        eth2:
+          bridge: RA21-LAN
+          ipv4: 10.10.1.1/24
+        eth1:
+          bridge: RA23-LAN
+          ipv4: 10.10.2.1/24
+
+###############################################################################
+
+  RA3:
+    network:
+      interfaces:
+        eth0:
+            bridge: RA3-LAN
+            ipv4: 172.16.110.254/24
+        eth3:
+          bridge: RA13-LAN
+          ipv4: 10.10.3.2/24
+        eth1:
+          bridge: RA23-LAN
+          ipv4: 10.10.2.2/24
+
+###############################################################################

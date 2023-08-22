@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../mytopo"
+		},
+		{
+			"path": "../OSPF"
+		},
+		{
+			"path": "../vrrp"
+		},
+		{
+			"path": "../projet"
+		}
+	]
+}

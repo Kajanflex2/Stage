@@ -1,0 +1,29 @@
+version: 1
+
+###############################################################################
+
+header:
+  name: Routage Dynamique (BGP & OSPF)
+  comment: Routage dyna utilisant le protocole OSPF à l'aide d'open source FRRouting (FRR).
+
+###############################################################################
+
+config:
+  prefix: mt
+  nat-bridge: lxcbr0
+  default-master: bullseye
+
+###############################################################################
+
+masters:
+  bullseye:
+    backend: lxc
+    template: debian
+    parameters:
+      release: bullseye
+      arch: amd64
+    family: debian
+
+###############################################################################
+disabled-groups:
+  # - groupB

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+header a {
+    text-decoration: none;
+}
+
+header {
+    padding: 0 20px;
+    background-color: #1d1f1d;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#logo a {
+    color: #0573b3;
+}
+
+
+/* list */
+
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 1050px;
+}
+
+a {
+    color: #faf8f8;
+}
+
+ul li {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+/* button ligin et signup */
+
+#login,
+#signup {
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+#login {
+    border: 2px solid #387bee;
+    border-radius: 5px;
+}
+
+#signup {
+    border: 2px solid #f34a4a;
+    border-radius: 5px;
+}
+
+#signup a {
+    color: #1b6edb;
+}
+
+#login a {
+    color: #009926;
+}
+
+footer {
+    margin-top: 0%;
+}
+
+
+/* Responsive */
+
+
+/*@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    #list {
+        display: block;
+    }
+}*/
+
+@media screen and (min-width: 1336px) {
+    .product-items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .product-collection-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex {
+        height: 60vh;
+    }
+    .product-col-left {
+        height: 121.5vh;
+    }
+}

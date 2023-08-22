@@ -1,0 +1,57 @@
+version: 1
+###############################################################################
+
+header:
+  name: ACME group
+  comment: The ACME organization
+
+###############################################################################
+
+hosts:
+  router:
+    master: alpine
+    network:
+      interfaces:
+        eth0:
+          bridge: nat-bridge
+          ipv4: dhcp
+        eth1:
+          bridge: acme-lan
+          ipv4: 192.168.1.254/24
+        eth2:
+          bridge: acme-dmz
+          ipv4: 172.16.110.254/24
+
+###############################################################################
+
+  dmz:
+    network:
+      interfaces:
+        eth0:
+          bridge: acme-dmz
+          ipv4: 172.16.110.10/24
+      gatewayv4: 172.16.110.254
+    templates:
+      - mailserver:
+          domain: acme.sns
+      - resolv:
+          domain: acme.sns
+          ns: 80.67.169.12
+
+###############################################################################
+
+  client:
+    network:
+      interfaces:
+        eth0:
+          bridge: acme-lan
+          ipv4: 192.168.1.10/24
+      gatewayv4: 192.168.1.254
+    templates:
+      - mailserver:
+          domain: acme.sns
+      - resolv:
+          domain: acme.sns
+          ns: 80.67.169.12
+
+###############################################################################

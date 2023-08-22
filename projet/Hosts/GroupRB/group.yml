@@ -1,0 +1,54 @@
+version: 1
+
+###############################################################################
+
+header:
+  name: Maquette BGP et OSPF
+  comment: OSPF Area 300 && BGP AS N°65300
+
+###############################################################################
+hosts:
+  RB1:
+    network:
+      interfaces:
+        eth4:
+          bridge: transit-RAB
+          ipv4: 11.10.1.2/24
+        eth1:
+          bridge: RB12-LAN
+          ipv4: 30.10.1.2/24
+        eth2:
+          bridge: RB31-LAN
+          ipv4: 30.10.2.1/24
+
+###############################################################################
+
+  RB2:
+    network:
+      interfaces:
+        eth5:
+          bridge: transit-RBC
+          ipv4: 11.10.2.1/24
+        eth1:
+          bridge: RB12-LAN
+          ipv4: 30.10.1.1/24
+        eth2:
+          bridge: RB32-LAN
+          ipv4: 30.10.3.1/24
+
+###############################################################################
+
+  RB3:
+    network:
+      interfaces:
+        eth0:
+          bridge: nat-bridge
+          ipv4: dhcp
+        eth1:
+          bridge: RB32-LAN
+          ipv4: 30.10.3.2/24
+        eth2:
+          bridge: RB31-LAN
+          ipv4: 30.10.2.2/24
+
+###############################################################################

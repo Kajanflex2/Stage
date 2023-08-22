@@ -1,0 +1,15 @@
+;
+; BIND reverse data file for watchmovies.movie
+;
+$TTL    604800
+@       IN      SOA     watchmovies.movie. admin.watchmovies.movie. (
+                        20230731        ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      watchmovies.movie.
+10      IN      PTR     srvdns.watchmovies.movie.
+144     IN      PTR     srvweb.watchmovies.movie.
+144     IN      PTR     www.watchmovies.movie.

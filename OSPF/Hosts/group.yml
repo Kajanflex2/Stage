@@ -1,0 +1,22 @@
+version: 1
+
+header:
+  name: Les Hôtes attachés à la maquette
+  comment: Routage dynamique utilisant le protocole OSPF à l'aide de l'open source FRRouting (FRR). Veuillez trouver ci-dessous les hôtes.
+
+hosts:
+  serverweb:
+    network:
+      interfaces:
+        eth0:
+          bridge: sever-LAN
+          ipv4: 172.16.111.10/24
+      gatewayv4: 172.16.111.254
+
+  client:
+    network:
+      interfaces:
+        eth0:
+          bridge: client-LAN
+          ipv4: 192.168.111.30/24
+      gatewayv4: 192.168.111.254
