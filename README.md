@@ -33,7 +33,7 @@
 
   Example:
 
-  For this example, I will use the 'OSPF' folder.
+  For this example, I will use the "OSPF" folder.
 
   The OSPF folder contains:
 
