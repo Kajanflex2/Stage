@@ -110,8 +110,8 @@
      root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R2
    
      RouterOSPF-R2
-     R2 |------> Host folder name
-     RouterOSPF |------------------> Groupe folder name
+     |           |------> Host folder name
+     |------------------> Groupe folder name
    
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -124,7 +124,7 @@
  
  updatemaster : Updates all the master containers
   
-    root@milxc-snster-vm:~/OSPF# snster  updatemasters 
+    root@milxc-snster-vm:~/OSPF# snster updatemasters 
    
 ------------------------------------------------------------------------------------------------------------------------------------------------
  Note:
