@@ -31,9 +31,12 @@
   Within the 'vscode' folder, you'll find the VSCode workspace configuration. I highly recommend using VSCode. Download all the files from GitHub, place them in the root directory, and extract them.
 
   Example:
+
   For this example, I will use the 'OSPF' folder.
 
   The OSPF folder contains:
+
+  
    A folder named RouterOSPF, which has subfolders and a group.yml file.
    A folder named Hosts, also with subfolders and a group.yml file.
    Additionally, there's a main.yml file.
