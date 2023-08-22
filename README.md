@@ -17,7 +17,7 @@
  how to use : 
 
    Download the **"milxc-snster-vm-2.1.0.ova"** oracle virtualbox file and import that.
-   Customize the configuration depend on your hardware.
+   Customize the configuration depend on your hardware.  
    
       Username: root or debian
                  |         |
