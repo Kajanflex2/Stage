@@ -39,9 +39,12 @@
   
    A folder named RouterOSPF, which has subfolders and a group.yml file.
    
+   
    A folder named Hosts, also with subfolders and a group.yml file.
    
+
    Additionally, there's a main.yml file.
+   
 
  Each subfolder contains the configuration file for each host, commonly referred to as provision.sh . In group.yml , you can define each host's network configurations and utilize templates. The main.yml file allows you to    
  specify the OS to be used with LXC containers and to configure the LXC container bridge.
