@@ -57,8 +57,8 @@ Each subfolder contains the configuration file for each host, commonly referred 
   create [name]: Creates the [name] container. By default, it creates all containers.
 
      root@milxc-snster-vm:~/OSPF# snster create
-   
-     or 
+     
+or 
    
      root@milxc-snster-vm:~/OSPF# snster create RouterOSPF-R1
   
