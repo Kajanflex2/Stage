@@ -24,7 +24,10 @@
       Password: root or debian
    
   Minimum requirements:
+
+  
     - 4 GB RAM 
+    
     - 60 GB free disk space.
 
   Within the 'vscode' folder, you'll find the VSCode workspace configuration. I highly recommend using VSCode. Download all the files from GitHub, place them in the root directory, and extract them.
