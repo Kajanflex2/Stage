@@ -58,7 +58,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
 
      root@milxc-snster-vm:~/OSPF# snster create
      
-or 
+  or 
    
      root@milxc-snster-vm:~/OSPF# snster create RouterOSPF-R1
   
