@@ -5,9 +5,8 @@
 
  Please consult the sites below for a better understanding:
  
-          https://github.com/flesueur/mi-lxc
-          
-          https://framagit.org/flesueur/snster
+   https://github.com/flesueur/mi-lxc
+   https://framagit.org/flesueur/snster
 
  Recap : 
   SNSTER (System and Network Simulator for hipsTERs, pronounced "senster") is a rapid prototyping framework for simulating computer infrastructures. It is based on the infrastructure-as-code principle: scripts programmatically         generate the target environment. The small memory footprint of LXC combined with differential images allows to run it on modest hardware such as standard laptops. SNSTER was originally a part of MI-LXC(v1). Since version 2, MI-LXC   uses SNSTER from this repository.
