@@ -4,8 +4,8 @@
  Please find the projects completed under the SNSTER framework.
 
  Please consult the sites below for a better understanding:
+ 
   https://github.com/flesueur/mi-lxc
-  
   https://framagit.org/flesueur/snster
 
  Recap : 
