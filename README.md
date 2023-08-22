@@ -55,51 +55,51 @@
  
   start :	Starts the created infrastructure
  
-  root@milxc-snster-vm:~/OSPF# snster start
+     root@milxc-snster-vm:~/OSPF# snster start
   
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
   stop :	Stops the created infrastructure
  
-  root@milxc-snster-vm:~/OSPF#  snster stop
+    root@milxc-snster-vm:~/OSPF#  snster stop
 
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
   attach [user@]<name> [command]: Attaches a terminal to <name> as [user] (defaults to root) and executes [command] (defaults to interactive shell).
  
-  root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
- 
-  or 
- 
-  root@milxc-snster-vm:~/OSPF# snster attach debian@RouterOSPF-R1
+    root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
+   
+    or 
+   
+    root@milxc-snster-vm:~/OSPF# snster attach debian@RouterOSPF-R1
  
  ------------------------------------------------------------------------------------------------------------------------------------------------
  
   display [user@]<name>: Displays a graphical desktop on <name> as [user] (defaults to debian).
  
-  root@milxc-snster-vm:~/OSPF# snster display RouterOSPF-R1
- 
-  or
-  
-  root@milxc-snster-vm:~/OSPF# snster display root@RouterOSPF-R1
-  
+    root@milxc-snster-vm:~/OSPF# snster display RouterOSPF-R1
+   
+    or
+    
+    root@milxc-snster-vm:~/OSPF# snster display root@RouterOSPF-R1
+    
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
   print :	Graphically displays the defined architecture
  
-  root@milxc-snster-vm:~/OSPF# snster print 
+    root@milxc-snster-vm:~/OSPF# snster print 
 
  ------------------------------------------------------------------------------------------------------------------------------------------------
   
  renet :	Renets all the containers
 
- root@milxc-snster-vm:~/OSPF# snster renet
+    root@milxc-snster-vm:~/OSPF# snster renet
 
  ------------------------------------------------------------------------------------------------------------------------------------------------
  
  destroy [name] 	: Destroys the [name] container, defaults to destroy all containers
 
- root@milxc-snster-vm:~/OSPF# snster destroy RouterOSPF-R1
+    root@milxc-snster-vm:~/OSPF# snster destroy RouterOSPF-R1
 
  ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -107,25 +107,25 @@
 
   exemple : 
 
-   root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R2
- 
-   RouterOSPF-R2
-   R2 |------> Host folder name
-   RouterOSPF |------------------> Groupe folder name
+     root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R2
+   
+     RouterOSPF-R2
+     R2 |------> Host folder name
+     RouterOSPF |------------------> Groupe folder name
    
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
  destroymaster : Destroys all the master containers
 
- root@milxc-snster-vm:~/OSPF# snster destroymasters 
+    root@milxc-snster-vm:~/OSPF# snster destroymasters 
 
  ------------------------------------------------------------------------------------------------------------------------------------------------
  
  updatemaster : Updates all the master containers
-
- root@milxc-snster-vm:~/OSPF# snster  updatemasters 
- 
+  
+    root@milxc-snster-vm:~/OSPF# snster  updatemasters 
+   
 ------------------------------------------------------------------------------------------------------------------------------------------------
  Note:
 
