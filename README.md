@@ -45,11 +45,11 @@
   
   create [name]: Creates the [name] container. By default, it creates all containers.
 
-  root@milxc-snster-vm:~/OSPF# snster create
-
-  or 
-
-  root@milxc-snster-vm:~/OSPF# snster create RouterOSPF-R1
+     root@milxc-snster-vm:~/OSPF# snster create
+   
+     or 
+   
+     root@milxc-snster-vm:~/OSPF# snster create RouterOSPF-R1
   
  ------------------------------------------------------------------------------------------------------------------------------------------------
  
