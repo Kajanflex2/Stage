@@ -1,10 +1,10 @@
-# Les projets effectués pendant mon stage.
+# Les projets réalisés pendant mon stage.
 
  Veuillez trouver les projets réalisés sous le framework SNSTER. 
  
  Please find the projects completed under the SNSTER framework.
 
- # Please consult the sites below for a better understanding:
+ Please consult the sites below for a better understanding:
  
    https://github.com/flesueur/mi-lxc
 
