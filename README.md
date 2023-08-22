@@ -16,7 +16,7 @@
 
  how to use : 
 
-   Download the milxc-snster-vm-2.1.0.ova oracle virtualbox file and import that.
+   Download the **"milxc-snster-vm-2.1.0.ova"** oracle virtualbox file and import that.
    Customize the configuration depend on your hardware.
    
       Username: root or debian
@@ -29,7 +29,7 @@
      - 4 GB RAM 
      - 60 GB free disk space.
 
-  Within the 'vscode' folder, you'll find the VSCode workspace configuration. I highly recommend using VSCode. Download all the files from GitHub, place them in the root directory, and extract them.
+  Within the "vscode" folder, you'll find the VSCode workspace configuration. I highly recommend using VSCode. Download all the files from GitHub, place them in the root directory, and extract them.
 
   Example:
 
