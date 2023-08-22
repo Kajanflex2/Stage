@@ -80,7 +80,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
  
     root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
 
-   or 
+  or 
      
     root@milxc-snster-vm:~/OSPF# snster attach debian@RouterOSPF-R1
  
@@ -90,7 +90,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
  
     root@milxc-snster-vm:~/OSPF# snster display RouterOSPF-R1
    
-   or
+  or
     
     root@milxc-snster-vm:~/OSPF# snster display root@RouterOSPF-R1
     
