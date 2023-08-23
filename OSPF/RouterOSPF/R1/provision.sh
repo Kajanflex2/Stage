@@ -50,8 +50,8 @@ echo "hostname R1" >> /etc/frr/vtysh.conf
 
 echo " 
 !
-interface eth3
- ip ospf priority 25
+interface eth2
+ ip ospf priority 110
 exit
 !
 router ospf
