@@ -10,7 +10,7 @@ cd `dirname $0`
 
 apt-get update
 
-DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano apache2 gedit fce4 dnsutils wireshark -y
+DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano apache2 gedit xfce4 dnsutils wireshark -y
 
 ###############################################################################
 
