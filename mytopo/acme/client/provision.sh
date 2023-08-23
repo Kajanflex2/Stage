@@ -9,11 +9,10 @@ cd `dirname $0`
 
 ###############################################################################
 
-# do something visible
-#ip route add 0.0.0.0/0 via 192.168.1.254
-
+#Met à jour la liste des packages disponibles.
 apt-get update
 
+#Installe les outils nécessaires sans interaction utilisateur.
 DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano gedit curl wget xfce4 dnsutils wireshark -y
 
 ###############################################################################

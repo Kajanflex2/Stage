@@ -8,17 +8,14 @@ cd `dirname $0`
 
 ###############################################################################
 
+#Met à jour la liste des packages disponibles.
 apt-get update
 
+
+#Installe les outils nécessaires sans interaction utilisateur.
 DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano apache2 gedit xfce4 dnsutils wireshark -y
 
 ###############################################################################
-
-# manage isp-a.milxc zone
-#DEBIAN_FRONTEND=noninteractive apt-get install -y certbot python3-certbot-apache
-
-#DEBIAN_FRONTEND=noninteractive apt-get install -y unbound
-
 
 # Crée une copie de sauvegarde du fichier index.html
 cp /var/www/html/index.html /var/www/html/index.html.back  
