@@ -76,7 +76,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
 
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
-  attach [user@]<name> [command]: Attaches a terminal to <name> as [user] (defaults to root) and executes [command] (defaults to interactive shell).
+  attach [user@]<name>[command]: Attaches a terminal to <name> as [user] (defaults to root) and executes [command] (defaults to interactive shell).
  
     root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
 
