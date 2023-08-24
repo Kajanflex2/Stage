@@ -4,14 +4,17 @@ if [ -z $SNSTERGUARD ] ; then exit 1; fi
 DIR=`dirname $0`
 cd `dirname $0`
 
-# do something visible
-#ip route add 0.0.0.0/0 via 192.168.1.254
-
 apt-get update
 
+#Installer les paquets nécessaires
 DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano gedit curl wget xfce4 dnsutils -y
 
 ###############################################################################
+
+# Activer la vérification du chemin retour (RP Filter) par défaut pour éviter le spoofing d'adresse IP.
+# Activer la vérification du chemin retour pour toutes les interfaces.
+# Autoriser le routage de paquets IP (IP forwarding) sur cette machin.
+# Enregistrer  les paquets avec des adresses source qui ne devraient pas être routables (martians).
 
 echo "
 net.ipv4.conf.default.rp_filter=1
@@ -20,11 +23,17 @@ net.ipv4.ip_forward=1
 net.ipv4.conf.all.log_martians = 1
 " >> /etc/sysctl.conf
 
+#Appliquer les modifications sysctl
 sysctl -p
 
 #sysctl -w net.ipv4.conf.eth0.ignore_routes_with_linkdown=1
 
 ###############################################################################
+
+# Crée l'interface vrrp4-2-3 comme une macvlan en mode bridge sur l'interface eth0
+# Définit l'adresse MAC de l'interface vrrp4-2-3
+# Attribue une adresse IP à l'interface vrrp4-2-3
+# Active l'interface vrrp4-2-3
 
 echo "
 
@@ -36,17 +45,21 @@ iface vrrp4-2-3 inet static
     up ip link set dev vrrp4-2-3 up
 " >> /etc/network/interfaces
 
+# Active l'interface vrrp4-2-3
 ifup vrrp4-2-3
 
 ###############################################################################
 
+# Configurer eth0 avec une adresse IP statique
 sed -i '/iface eth0 inet dhcp/ c\iface eth0 inet static\n  address 192.168.1.250/24' /etc/network/interfaces
 
 ###############################################################################
 
+# Ajouter la clé GPG pour le dépôt FRR
 #__add GPG key
 curl -s https://deb.frrouting.org/frr/keys.gpg | tee /usr/share/keyrings/frrouting.gpg > /dev/null
 
+# Configurer le dépôt pour FRR
 #__possible values for FRRVER: frr-6 frr-7 frr-8 frr-stable
 #__frr-stable will be the latest official stable release
 FRRVER="frr-8"
@@ -54,19 +67,22 @@ echo deb '[signed-by=/usr/share/keyrings/frrouting.gpg]' https://deb.frrouting.o
 
 ###############################################################################
 
+# Mettre à jour la liste des paquets
 apt-get update
 
+# Installer FRR
 #__update and install FRR
 DEBIAN_FRONTEND=noninteractive apt-get install frr frr-pythontools -y
 
 ###############################################################################
 
-#Activer OSPFv2
+# Activer OSPFv2 dans la configuration des démons FRR
 sed -i 's/ospfd=no/ospfd=yes/' /etc/frr/daemons
 
-#Activer VRRP
+#Activer VRRP dans la configuration des démons FRR
 sed -i 's/vrrpd=no/vrrpd=yes/' /etc/frr/daemons
 
+#Configurer le nom d'hôte pour VTYSH
 echo "hostname R4" >> /etc/frr/vtysh.conf
 
 echo " 
@@ -90,18 +106,20 @@ exit
 
 ###############################################################################
 
+# Activer le service FRR au démarrage
 systemctl enable frr.service
 
 ###############################################################################
 
-service frr restart
+# Redémarrer le service FRR
 
-###############################################################################
+service frr restart
 
 systemctl restart frr.service
 
 ###############################################################################
 
+# Configure le kernel pour ignorer les routes associées à l'interface eth0 lorsque le lien est inactif
 sysctl -w net.ipv4.conf.eth0.ignore_routes_with_linkdown=1
 
 ###############################################################################

@@ -8,6 +8,7 @@ cd `dirname $0`
 ###############################################################################
 apt-get update
 
+#Installer les paquets nécessaires
 DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano gedit wireshark openssh-server  xfce4 dnsutils -y
 
 ###############################################################################
@@ -16,6 +17,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano gedit wireshark op
 # Activer la vérification du chemin retour pour toutes les interfaces.
 # Autoriser le routage de paquets IP (IP forwarding) sur cette machin.
 # Enregistrer  les paquets avec des adresses source qui ne devraient pas être routables (martians).
+
 echo "
 net.ipv4.conf.default.rp_filter=1
 net.ipv4.conf.all.rp_filter=1

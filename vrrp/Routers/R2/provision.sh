@@ -73,7 +73,6 @@ sed -i 's/ospfd=no/ospfd=yes/' /etc/frr/daemons
 #Activer VRRP
 sed -i 's/vrrpd=no/vrrpd=yes/' /etc/frr/daemons
 
-
 echo "hostname R2" >> /etc/frr/vtysh.conf
 
 echo "
@@ -117,9 +116,7 @@ sysctl -w net.ipv4.conf.eth0.ignore_routes_with_linkdown=1
  #vrrp 5 version 3
  #vrrp 5 priority 200
  #vrrp 5 advertisement-interval 1500
- #vrrp 5 ip 10.0.2.16
- #vrrp 5 ipv6 2001:0db8::0370:7334
-
+ #vrrp 5 192.168.1.254
 
 #As for the MAC address assigned to this interface, the last byte of the address holds the VRID, in this case 0x05. 
 
