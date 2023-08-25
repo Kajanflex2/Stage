@@ -76,7 +76,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
 
   ------------------------------------------------------------------------------------------------------------------------------------------------
   
-  attach [user@]<name>[command]: Attaches a terminal to <name> as [user] (defaults to root) and executes [command] (defaults to interactive shell).
+  attach [user@]name[command]: Attaches a terminal to name as [user] (defaults to root) and executes [command] (defaults to interactive shell).
  
     root@milxc-snster-vm:~/OSPF# snster attach  RouterOSPF-R1
 
@@ -86,7 +86,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
  
  ------------------------------------------------------------------------------------------------------------------------------------------------
  
-  display [user@]<name>: Displays a graphical desktop on <name> as [user] (defaults to debian).
+  display [user@]name : Displays a graphical desktop on name as [user] (defaults to debian).
  
     root@milxc-snster-vm:~/OSPF# snster display RouterOSPF-R1
    
@@ -141,8 +141,8 @@ Each subfolder contains the configuration file for each host, commonly referred 
 
  Note:
 
- For every modification made in provision.sh, you must destroy the old container and create a new one for the changes to take effect. Sometimes, it might take a while to attach to or display the container you wish to connect to. In such cases, stop the container and start it. Also, verify the iptables rules on the host machine within the VM and also verify the group.yml file.
-
+ For every modification made in provision.sh, you must destroy the old container and create a new one for the changes to take effect. Sometimes, it might take a while to attach to or display the container you wish to connect to. In such cases, stop the container and start it. After booting the VM for the first time, check the time zone. Also, verify the iptables rules on the host machine within the VM and also verify the group.yml file.
+ 
  The file **"milxc-snster-vm-2.1.0.ova"**  you've downloaded will be around 25 GB. Once you've imported it into Oracle VirtualBox, you'll need to extend this storage limit to create all the models included in this repository.
  
  Here are some web links that might help you:
