@@ -143,7 +143,7 @@ Each subfolder contains the configuration file for each host, commonly referred 
  Note:
 
  For every modification made in provision.sh, you must destroy the old container and create a new one for the changes to take effect. Sometimes, it might take a while to attach to or display the container you wish to connect to. In such cases, stop the container and start it. After booting the VM for the first time, check the time zone. Also, verify the iptables rules on the host machine within the VM and also verify the group.yml file.
- You should manually activate the isc-dhcp-server after the container has been created
+ You should manually activate the isc-dhcp-server after the container has been created.
 
  The file **"milxc-snster-vm-2.1.0.ova"**  you've downloaded will be around 25 GB. Once you've imported it into Oracle VirtualBox, you'll need to extend this storage limit to create all the models included in this repository.
  
