@@ -31,7 +31,11 @@ rc-update add iptables
 # Définir les variables à ajouter dans la règle de translation d'adresse. Carte réseau du routeur relié à l'internet (via lxcbr0).
 
 acme_router="eth0"
+
+#Adresse réseau du coté serveur WEB.
 acme_dmz="172.16.110.0/24"
+
+#Adresse réseau du côté Client.
 acme_client="192.168.1.0/24"
 
 #les règles NAT
