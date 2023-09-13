@@ -30,7 +30,7 @@ curl -s https://deb.frrouting.org/frr/keys.gpg | tee /usr/share/keyrings/frrouti
 
 #__possible values for FRRVER: frr-6 frr-7 frr-8 frr-stable
 #__frr-stable will be the latest official stable release
-FRRVER="frr-8"
+FRRVER="frr-9"
 
 echo deb '[signed-by=/usr/share/keyrings/frrouting.gpg]' https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | tee -a /etc/apt/sources.list.d/frr.list
 
