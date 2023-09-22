@@ -1,9 +1,11 @@
 #!/bin/bash
-# OSPF router template
+
 set -e
 
 if [ -z $SNSTERGUARD ] ; then exit 1; fi
+
 DIR=`dirname $0`
+
 cd `dirname $0`
 
 ###############################################################################
@@ -11,6 +13,12 @@ cd `dirname $0`
 apt-get update 
 
 DEBIAN_FRONTEND=noninteractive apt-get install net-tools nano gedit wireshark openssh-server  xfce4 dnsutils -y
+
+if [[ $set_eth0_static == "yes"  ]]; then
+
+    #address_eth0 = $set_eth0_addresss
+    sed -i "/iface eth0 inet dhcp/ c\iface eth0 inet static\n  address $set_eth0_address" /etc/network/interfaces
+fi
 
 ###############################################################################
 
@@ -36,7 +44,6 @@ FRRVER="frr-8"
 echo deb '[signed-by=/usr/share/keyrings/frrouting.gpg]' https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | tee -a /etc/apt/sources.list.d/frr.list
 
 ###############################################################################
-
 
 #__update and install FRR
 DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install frr frr-pythontools -y
@@ -107,7 +114,6 @@ echo "
 exit
 !
 " >> /etc/frr/frr.conf
-
 
 ###############################################################################
 
